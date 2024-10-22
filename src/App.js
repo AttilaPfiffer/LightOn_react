@@ -2,17 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import Jatekter from './components/Jatekter.js';
+import { KattContext } from './contexts/KattContext.js';
+import { useContext } from 'react';
+
 
 function App() {
   
-  const [lista, setLista] = useState([true, true, false, true, false, false, true, false, true])
-  const [allapot, setAllapot] = useState(false)
-
-  function katt(adat) {
-    const slista = [...lista]
-
-
-  }
+  const {lista} = useContext(KattContext)
 
   return (
     <div className="App">
@@ -20,7 +16,7 @@ function App() {
         <h1>Light On</h1>
       </header>
       <article>
-          <Jatekter lista = {lista} katt = {katt}/>
+          <Jatekter lista = {lista} />
       </article>
       <footer>Pfiffer Attila</footer>
     </div>

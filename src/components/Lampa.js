@@ -1,13 +1,16 @@
 import React from 'react'
 import "./Lampa.css"
+import { KattContext } from '../contexts/KattContext'
+import { useContext } from 'react'
 
 function Lampa(props) {
-    function katt() {
+  const {katt} = useContext(KattContext)
+    function handleKatt() {
         
-        props.katt(props.index)
+        katt(props.index)
     }
   return (
-    <div className = {`lampa ${props.jel ? "fel" : "le"}`} onClick = {() => katt()}>{props.jel}</div>
+    <div className = {`lampa ${props.jel ? "fel" : "le"}`} onClick = {() => handleKatt()}>{props.jel}</div>
   )
 }
 

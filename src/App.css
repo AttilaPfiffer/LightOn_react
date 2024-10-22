@@ -36,6 +36,13 @@ article {
   margin: auto;
 }
 
+.fel {
+  background-color: blue;
+}
+
+.le {
+  background-color: red;
+}
 
 @keyframes App-logo-spin {
   from {
